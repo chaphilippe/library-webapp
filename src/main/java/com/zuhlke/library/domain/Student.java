@@ -60,10 +60,10 @@ public class Student implements Serializable {
     private Date joinedDate;
 
     @Column(name = "is_competent", columnDefinition = "BIT")
-    private boolean isCompetent;
+    private Boolean isCompetent;
     
     @Column(name = "is_scholarship", columnDefinition = "BIT")
-    private boolean isScholarship;
+    private Boolean isScholarship;
     
     public Student() { }
 
@@ -123,19 +123,19 @@ public class Student implements Serializable {
 		this.joinedDate = joinedDate;
 	}
 
-	public boolean getIsCompetent() {
+	public Boolean getIsCompetent() {
 		return isCompetent;
 	}
 
-	public void setIsCompetent(boolean isCompetent) {
+	public void setIsCompetent(Boolean isCompetent) {
 		this.isCompetent = isCompetent;
 	}
 
-	public boolean getIsScholarship() {
+	public Boolean getIsScholarship() {
 		return isScholarship;
 	}
 
-	public void setIsScholarship(boolean isScholarship) {
+	public void setIsScholarship(Boolean isScholarship) {
 		this.isScholarship = isScholarship;
 	}
     

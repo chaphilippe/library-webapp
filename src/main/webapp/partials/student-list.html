@@ -19,7 +19,7 @@
     <div data-ng-repeat="student in students" class="book-item">
       <div class="book-title-wrapper">
         <h4 class="title">{{student.firstname}}</h4>
-        <a data-ng-show="canEdit" href="#/students/{{student.id}}">
+        <a href="#/students/{{student.id}}">
           <i class="glyphicon glyphicon-pencil"></i>
         </a>
         <h5 class="author">{{student.lastname}}</h5>

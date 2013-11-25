@@ -2,10 +2,10 @@ angular.module('library.controllers')
 
 .controller('studentDetailCtrl', function($scope, $routeParams, $location, $cookies, studentService, messages) {
 
-  var id = $routeParams.bookId;
+  var id = $routeParams.studentId;
 
   if (id !== undefined) {
-    $scope.student = studentService.get({ bookId : id });
+    $scope.student = studentService.get({ studentId : id });
   } else {
     $scope.student = {};
   }

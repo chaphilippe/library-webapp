@@ -7,6 +7,7 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet" media="screen">
   
   <style>
@@ -35,6 +36,7 @@
 
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
   <script type="text/javascript" src="js/jquery.iframe-transport.js"></script>
   <script type="text/javascript" src="js/jquery.fileupload.js"></script>
   <script type="text/javascript" src="js/angular-1.1.5.min.js"></script>

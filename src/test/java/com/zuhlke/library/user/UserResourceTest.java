@@ -9,7 +9,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.zuhlke.library.domain.User;
-import com.zuhlke.library.domain.UserBuilder;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserResourceTest {
@@ -19,7 +18,7 @@ public class UserResourceTest {
     
     @Test
     public void shouldCreateUser() throws Exception {
-        User user = new UserBuilder().withName("Marvin").build();
+        User user = new User().withName("Marvin");
         userResource.createUser(user);
         verify(mockUserService).createUser(user);
     }

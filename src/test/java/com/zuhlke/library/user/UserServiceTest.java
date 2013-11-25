@@ -17,7 +17,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.zuhlke.library.domain.User;
-import com.zuhlke.library.domain.UserBuilder;
 import com.zuhlke.library.repositories.UserRepository;
 import com.zuhlke.library.security.SecurityUtils;
 
@@ -38,7 +37,7 @@ public class UserServiceTest {
     public void shouldCreateUser() throws Exception {
         when(mockRepository.findByEmail("mav@zuhlke.com")).thenReturn(null);
         when(mockSecurityUtils.hash("password", "mav@zuhlke.com")).thenReturn("hashed");
-        User user = new UserBuilder().withName("Marvin").withEmail("mav@zuhlke.com").withPassword("password").build();
+        User user = new User().withName("Marvin").withEmail("mav@zuhlke.com").withPassword("password");
         userService.createUser(user);
         ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
         verify(mockRepository).save(captor.capture());
@@ -48,7 +47,7 @@ public class UserServiceTest {
     
     @Test
     public void shouldFailWithDuplicateEmailError() throws Exception {
-        User user = new UserBuilder().withName("Marvin").withEmail("mav@zuhlke.com").build();
+        User user = new User().withName("Marvin").withEmail("mav@zuhlke.com");
         when(mockRepository.findByEmail("mav@zuhlke.com")).thenReturn(user);
         try {
             userService.createUser(user);

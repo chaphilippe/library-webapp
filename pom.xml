@@ -242,9 +242,6 @@
       <testResource>
         <directory>src/test/resources</directory>
       </testResource>
-      <testResource>
-        <directory>src/test/javascript</directory>
-      </testResource>
     </testResources>
 
     <pluginManagement>
@@ -328,24 +325,6 @@
         <version>2.12</version>
         <configuration>
           <argLine>-XX:-UseSplitVerifier</argLine>
-        </configuration>
-      </plugin>
-
-      <!-- Karma JavaScript Unit Tests -->
-      <plugin>
-        <groupId>com.kelveden</groupId>
-        <artifactId>maven-karma-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>start</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <browsers>PhantomJS</browsers>
-          <configFile>src/test/javascript/karma.conf.js</configFile>
         </configuration>
       </plugin>
 

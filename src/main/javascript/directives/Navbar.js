@@ -11,7 +11,7 @@ angular.module('library.directives')
       }
       $scope.logout = function() {
         authService.logout().then(function() {
-          $location.path('/books');
+          $location.path('/students');
           $route.reload();
         });
       };

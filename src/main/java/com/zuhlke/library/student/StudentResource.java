@@ -1,4 +1,4 @@
-package com.zuhlke.library.book;
+package com.zuhlke.library.student;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.zuhlke.library.domain.Book;
+import com.zuhlke.library.domain.Student;
 import com.zuhlke.library.domain.json.Views;
 
 /**
@@ -28,39 +28,39 @@ import com.zuhlke.library.domain.json.Views;
  *
  */
 @Component
-@Path("/books")
-public class BookResource {
+@Path("/students")
+public class StudentResource {
 
-    final Logger logger = LoggerFactory.getLogger(BookResource.class);
+    final Logger logger = LoggerFactory.getLogger(StudentResource.class);
     
     @Inject
-    private BookService bookService;
+    private StudentService studentService;
     
     @GET 
     @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Book.class)
-    public List<Book> getBooks(@QueryParam("q") String query) {
-        return bookService.findBooks(query);
+    public List<Student> getStudents(@QueryParam("q") String query) {
+        return studentService.findStudents(query);
     }
     
     @GET @Path("/{id}") 
     @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Book.class)
-    public Book getBook(@PathParam("id") Long id) {
-        Book book = bookService.getBook(id);
-        if (book != null) {
-            return book;
+    public Student getStudent(@PathParam("id") Long id) {
+        Student student = studentService.getStudent(id);
+        if (student != null) {
+            return student;
         }
         throw new WebApplicationException(Response.Status.NOT_FOUND);
     }
     
     @POST 
     @Consumes(MediaType.APPLICATION_JSON)
-    public void saveBook(Book book) {
-        bookService.saveBook(book);
+    public void saveStudent(Student student) {
+    	studentService.saveStudent(student);
     }
 
     @DELETE @Path("/{id}") 
-    public void deleteBook(@PathParam("id") Long id) {
-        bookService.deleteBook(id);
+    public void deleteStudent(@PathParam("id") Long id) {
+    	studentService.deleteStudent(id);
     }
 
 }

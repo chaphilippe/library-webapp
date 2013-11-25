@@ -18,7 +18,6 @@ import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import com.zuhlke.library.domain.User;
-import com.zuhlke.library.domain.UserBuilder;
 import com.zuhlke.library.domain.UserRole;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -57,12 +56,11 @@ public class UserRepositoryTest {
     
     @Test
     public void shouldSaveNewUser() throws Exception {
-        final User user = new UserBuilder()
+        final User user = new User()
             .withEmail("xxx@zuhlke.com")
             .withName("Marvin")
             .withPassword("pwd")
-            .withRole(UserRole.ADMINISTRATOR)
-            .build();
+            .withRole(UserRole.ADMINISTRATOR);
         
         transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             @Override

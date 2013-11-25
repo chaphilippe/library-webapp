@@ -8,19 +8,19 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
     controller : 'loginCtrl',
     templateUrl : 'partials/login.html'
 
-  }).when('/books', {
-    controller : 'bookListCtrl',
-    templateUrl : 'partials/book-list.html',
+  }).when('/students', {
+    controller : 'studentListCtrl',
+    templateUrl : 'partials/student-list.html',
     resolve : { checkLogin : 'checkLogin' }
 
-  }).when('/books/new', {
-    controller : 'bookDetailCtrl',
-    templateUrl : 'partials/book-detail.html',
+  }).when('/students/new', {
+    controller : 'studentDetailCtrl',
+    templateUrl : 'partials/student-detail.html',
     resolve : { checkLogin : 'checkLogin' }
 
-  }).when('/books/:bookId', {
-    controller : 'bookDetailCtrl',
-    templateUrl : 'partials/book-detail.html',
+  }).when('/students/:studentId', {
+    controller : 'studentDetailCtrl',
+    templateUrl : 'partials/student-detail.html',
     resolve : { checkLogin : 'checkLogin' }
 
   }).when('/signup', {
@@ -28,7 +28,7 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
     templateUrl : 'partials/signup.html'
       
   }).otherwise({
-    redirectTo : '/books'
+    redirectTo : '/students'
   });
 
 })

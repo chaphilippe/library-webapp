@@ -16,17 +16,13 @@
 
 <div class="row">
   <div id="book-listing" class="col-12">
-    <div data-ng-repeat="book in books" class="book-item">
+    <div data-ng-repeat="student in students" class="book-item">
       <div class="book-title-wrapper">
-        <h4 class="title">{{book.title}}</h4>
-        <a data-ng-show="canEdit" href="#/books/{{book.id}}">
+        <h4 class="title">{{student.firstname}}</h4>
+        <a data-ng-show="canEdit" href="#/students/{{student.id}}">
           <i class="glyphicon glyphicon-pencil"></i>
         </a>
-        <h5 class="author">{{book.author}}</h5>
-      </div>
-      <div class="book-description-wrapper">
-        <img data-ng-src="api/artwork/{{book.artwork}}" data-ng-if="hasArtwork(book)">
-        <p>{{book.description}}</p>
+        <h5 class="author">{{student.lastname}}</h5>
       </div>
       <hr>
     </div>

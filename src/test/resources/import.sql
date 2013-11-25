@@ -1,6 +1,4 @@
-insert into book (book_id, title, author) values (1, 'Domain-Driven Design', 'Eric Evans');
-insert into book (book_id, title, author) values (2, 'Service-Oriented Architecture', 'Thomas Erl');
-insert into book (book_id, title, author) values (3, 'Java Persistence with Hibernate', 'Christian Bauer, Gavin King');
+insert into student (student_id, firstname, lastname, age, sex, origin, department) values (1, 'John', 'Smith', '18', 'f', 'eth', 'dep');
 
 insert into library_user (user_id, email, password, fullname, role) values (1, 'nmo@zuhlke.com', 'pwd', 'Neil M', 'ADMINISTRATOR');
 insert into library_user (user_id, email, password, fullname, role) values (2, 'zab@zuhlke.com', 'pwd', 'Zaphod B', 'USER');

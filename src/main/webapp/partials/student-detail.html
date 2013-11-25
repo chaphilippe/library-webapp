@@ -1,0 +1,40 @@
+<div data-navbar></div>
+
+<div class="row well">
+  <form id="student-detail-form" name="studentDetailForm" class="form-horizontal">
+    <input type="hidden" data-ng-model="student.id" />
+    <div class="form-group">
+      <label class="col-2 control-label" for="input-title">Firstname</label>
+      <div class="col-6 controls">
+        <input type="text" id="input-title" class="form-control" data-ng-model="student.firstname" required maxlength="500">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-2 control-label" for="input-author">Lastname</label>
+      <div class="col-6 controls">
+        <input type="text" id="input-author" class="form-control" data-ng-model="student.lastname" required maxlength="500">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-2 control-label" for="input-description">Sex</label>
+      <div class="col-8 controls">
+        <textarea rows="10" id="input-description" class="form-control" data-ng-model="student.sex" maxlength="2000"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-2 control-label" for="input-artwork">Departmenr</label>
+      <div class="col-8 controls">
+        <input type="text" id="input-author" class="form-control" data-ng-model="student.department" required maxlength="500">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-2"></div>
+      <div class="col-10 controls">
+        <button type="button" class="btn btn-success" data-ng-click="save(student)" data-ng-disabled="studentDetailForm.$invalid">{{'save'|i18n}}</button>
+        <button type="button" class="btn btn-danger" data-ng-click="remove(student.id)" data-ng-show="student.id">{{'delete'|i18n}}</button>
+        <a type="button" class="btn btn-default" href="#/students">{{'cancel'|i18n}}</a>
+      </div>
+    </div>
+  </form>
+</div>
+

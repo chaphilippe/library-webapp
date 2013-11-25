@@ -20,7 +20,7 @@
       <!-- ADD ALL RESOURCES HERE -->
       <ref bean="loginResource" />
       <ref bean="artworkResource" />
-      <ref bean="bookResource" />
+      <ref bean="studentResource" />
       <ref bean="userResource" />
 
     </jaxrs:serviceBeans>

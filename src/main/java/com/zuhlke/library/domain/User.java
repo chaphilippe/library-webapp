@@ -50,7 +50,7 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private UserRole role;
     
-    User() { }
+    public User() { }
     
     public Long getId() {
         return id;
@@ -78,6 +78,26 @@ public class User implements Serializable {
     
     public String getName() {
         return name;
+    }
+    
+    public User withName(String name) {
+    	this.name = name;
+    	return this;
+    }
+    
+    public User withEmail(String email) {
+    	this.email = email;
+    	return this;
+    }
+    
+    public User withPassword(String password) {
+    	this.password = password;
+    	return this;
+    }
+    
+    public User withRole(UserRole role) {
+    	this.role = role;
+    	return this;
     }
     
     public void setName(String name) {

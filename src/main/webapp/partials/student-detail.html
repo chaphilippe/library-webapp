@@ -18,7 +18,7 @@
     <div class="form-group">
       <label class="col-2 control-label" for="input-description">Sex</label>
       <div class="col-8 controls">
-        <textarea rows="10" id="input-description" class="form-control" data-ng-model="student.sex" maxlength="2000"></textarea>
+        <textarea rows="10" id="input-description" class="form-control" data-ng-model="student.sex" maxlength="1"></textarea>
       </div>
     </div>
     <div class="form-group">
@@ -43,6 +43,12 @@
       <label class="col-2 control-label" for="input-artwork">Joined Date</label>
       <div class="col-8 controls">
         <input type="text" data-datepicker data-ng-model="student.joinedDate" required><i class="info icon-calendar"></i>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-2 control-label" for="input-artwork">Graduation Date</label>
+      <div class="col-8 controls">
+        <input type="text" data-datepicker data-ng-model="student.graduationDate"><i class="info icon-calendar"></i>
       </div>
     </div>
     <div class="form-group">

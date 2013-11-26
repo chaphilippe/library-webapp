@@ -20,15 +20,13 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.google.common.base.Objects;
 
-@Entity @Table(name = "student") @Cacheable
-public class Student implements Serializable {
+@Entity @Table(name = "teacher") @Cacheable
+public class Teacher implements Serializable {
 
-    private static final long serialVersionUID = 5541659969794633170L;
-
-    @Id 
-    @GeneratedValue(generator = "student_id", strategy = GenerationType.TABLE)
-    @TableGenerator(name = "student_id", pkColumnValue = "student")
-    @Column(name = "student_id")
+	@Id 
+    @GeneratedValue(generator = "teacher_id", strategy = GenerationType.TABLE)
+    @TableGenerator(name = "teacher_id", pkColumnValue = "teacher")
+    @Column(name = "teacher_id")
     private Long id;
     
     @Column(name = "firstname")
@@ -59,17 +57,10 @@ public class Student implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date joinedDate;
 
-    @Column(name = "graduation_date")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date graduationDate;
-    
     @Column(name = "is_competent", columnDefinition = "BIT")
     private Boolean isCompetent;
-    
-    @Column(name = "is_scholarship", columnDefinition = "BIT")
-    private Boolean isScholarship;
-    
-    public Student() { }
+  
+    public Teacher() { }
 
     public String getFirstname() {
 		return firstname;
@@ -127,15 +118,6 @@ public class Student implements Serializable {
 		this.joinedDate = joinedDate;
 	}
 
-	public Date getGraduationDate() {
-		return graduationDate;
-	}
-
-	public void setGraduationDate(Date graduationDate) {
-		this.graduationDate = graduationDate;
-	}
-
-	
 	public Boolean getIsCompetent() {
 		return isCompetent;
 	}
@@ -143,15 +125,6 @@ public class Student implements Serializable {
 	public void setIsCompetent(Boolean isCompetent) {
 		this.isCompetent = isCompetent;
 	}
-
-	public Boolean getIsScholarship() {
-		return isScholarship;
-	}
-
-	public void setIsScholarship(Boolean isScholarship) {
-		this.isScholarship = isScholarship;
-	}
-    
     
     public Long getId() {
         return id;
@@ -166,57 +139,52 @@ public class Student implements Serializable {
         return Objects.toStringHelper(this).toString();
     }
     
-    public Student withId(long id) {
+    public Teacher withId(long id) {
         this.id = id;
         return this;
     }
     
-    public Student withFirstname(String firstname) {
+    public Teacher withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
     }
     
-    public Student withLastname(String lastname) {
+    public Teacher withLastname(String lastname) {
     	this.lastname = lastname;
     	return this;
     }
     
-    public Student withAge(String age) {
+    public Teacher withAge(String age) {
         this.age = age;
         return this;
     }
     
-    public Student withSex(String sex) {
+    public Teacher withSex(String sex) {
     	this.sex = sex;
     	return this;
     }
     
-    public Student withOrigin(String origin) {
+    public Teacher withOrigin(String origin) {
     	this.origin = origin;
     	return this;
     }
 
-    public Student withDepartment(String department) {
+    public Teacher withDepartment(String department) {
     	this.department = department;
     	return this;
     }
     
-    public Student withJoinedDate(Date joinedDate) {
+    public Teacher withJoinedDate(Date joinedDate) {
     	this.joinedDate = joinedDate;
     	return this;
     }
-    
-    public Student withGraduationDate(Date graduationDate) {
-    	this.graduationDate = graduationDate;
-    	return this;
-    }
 
-    public Student withIsCompetent(Boolean isCompetent) {
+    public Teacher withIsCompetent(Boolean isCompetent) {
         this.isCompetent = isCompetent;
         return this;
     }
     
-    public Student withIsScholarship(Boolean isCompetent) {
+    public Teacher withIsScholarship(Boolean isCompetent) {
     	this.isCompetent = isCompetent;
     	return this;
     }

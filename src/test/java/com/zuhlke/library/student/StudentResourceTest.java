@@ -23,15 +23,15 @@ public class StudentResourceTest {
 
     final List<Student> students = Arrays.asList(
         new Student().withId(14L).withFirstname("John").withAge("18").withDepartment("dep").withLastname("Smith").
-        withIsCompetent(false).withIsScholarship(true).withSex("female").withIssueDate(new Date()),
+        withIsCompetent(false).withIsScholarship(true).withSex("female").withJoinedDate(new Date()),
         new Student().withId(12).withFirstname("Mark").withAge("18").withDepartment("dep").withLastname("Smith").
-        withIsCompetent(false).withIsScholarship(true).withSex("female").withIssueDate(new Date()),
+        withIsCompetent(false).withIsScholarship(true).withSex("female").withJoinedDate(new Date()),
         new Student().withId(13L).withFirstname("Peter").withAge("18").withDepartment("dep").withLastname("Smith").
-        withIsCompetent(false).withIsScholarship(true).withSex("female").withIssueDate(new Date())
+        withIsCompetent(false).withIsScholarship(true).withSex("female").withJoinedDate(new Date())
     );
     
     final Student student = new Student().withId(1L).withFirstname("John").withAge("18").withDepartment("dep").withLastname("Smith").
-            withIsCompetent(false).withIsScholarship(true).withSex("female").withIssueDate(new Date());
+            withIsCompetent(false).withIsScholarship(true).withSex("female").withJoinedDate(new Date());
 
     @Mock StudentService mockStudentService;
     @InjectMocks StudentResource resource = new StudentResource();

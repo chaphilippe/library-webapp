@@ -1,12 +1,22 @@
 <div class="header">
-  <h1>{{'my_library'|i18n}}</h1>
+  <h1>{{'students_list'|i18n}}</h1>
   <span class="menu not-logged-in" data-ng-hide="fullName">
     <a class="login" href="#/login">{{'login'|i18n}}</a>
     <a class="signup" href="#/signup">{{'sign_up'|i18n}}</a>
   </span>
   <span class="menu logged-in" data-ng-show="fullName">
     <a class="login" href="javascript:;">{{fullName}}</a>
-    <a class="createBook" href="#/students/new" data-ng-show="isAdmin">Create Student</a>
+<!--     <a class="createEntry" href="#/students/new" data-ng-show="isAdmin">Create Student</a> -->
+<!--     <a class="createEntry" href="#/teachers/new" data-ng-show="isAdmin">Create Teacher</a> -->
+    <div class="btn-group">
+     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+         Create
+     </button>
+     <ul class="dropdown-menu">
+        <a class="createEntry" href="#/students/new" data-ng-show="isAdmin">Add Student</a>
+		<a class="createEntry" href="#/teachers/new" data-ng-show="isAdmin">Add Teacher</a>
+     </ul>
+    </div>
     <a class="logout" href="javascript:;" data-ng-click="logout()">{{'logout'|i18n}}</a>
   </span>
 </div>

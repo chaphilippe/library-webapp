@@ -23,10 +23,25 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
     templateUrl : 'partials/student-detail.html',
     resolve : { checkLogin : 'checkLogin' }
 
+  }).when('/teachers', {
+	    controller : 'teacherListCtrl',
+	    templateUrl : 'partials/teacher-list.html',
+	    resolve : { checkLogin : 'checkLogin' }
+  }).when('/teachers/new', {
+	    controller : 'teacherDetailCtrl',
+	    templateUrl : 'partials/teacher-detail.html',
+	    resolve : { checkLogin : 'checkLogin' }
+  }).when('/teachers/:teacherId', {
+	    controller : 'teacherDetailCtrl',
+	    templateUrl : 'partials/teacher-detail.html',
+	    resolve : { checkLogin : 'checkLogin' }
   }).when('/signup', {
-    controller : 'signUpCtrl',
-    templateUrl : 'partials/signup.html'
-      
+	    controller : 'signUpCtrl',
+	    templateUrl : 'partials/signup.html'
+  }).when('/signup', {
+		    controller : 'signUpCtrl',
+		    templateUrl : 'partials/signup.html'
+		      
   }).otherwise({
     redirectTo : '/students'
   });
@@ -49,7 +64,7 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
         function error(response) {
             if ($.inArray(response.status, [ 400, 420, 404, 415, 500 ])) {
                 $('#system-error-dialog').modal().on('hidden.bs.modal', function() {
-                    window.location = '#/books';
+                    window.location = '#/students';
                 });
             }
             return $q.reject(response);
@@ -69,7 +84,7 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
         }
         function error(response) {
             if (response.status == 403) { // Forbidden
-                $location.path('/books');
+                $location.path('/students');
             }
             return $q.reject(response);
         }

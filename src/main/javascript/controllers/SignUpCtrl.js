@@ -11,7 +11,7 @@ angular.module('library.controllers')
         // success
         function(data) {
           authService.login(user.email, user.password).then(function() {
-            $location.path('/books');
+            $location.path('/students');
           });
           
         },

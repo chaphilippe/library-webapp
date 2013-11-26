@@ -4,7 +4,7 @@ angular.module('library.controllers')
 
   $scope.login = function(user) {
     authService.login(user.username, user.password).then(function() {
-      $location.path('/books');
+      $location.path('/students');
 
     }, function() {
       $scope.error = messages.login_error;

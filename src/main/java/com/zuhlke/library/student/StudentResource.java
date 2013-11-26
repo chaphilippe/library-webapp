@@ -24,7 +24,7 @@ import com.zuhlke.library.domain.Student;
 import com.zuhlke.library.domain.json.Views;
 
 /**
- * REST Resource for /books
+ * REST Resource for /students
  *
  */
 @Component
@@ -37,13 +37,13 @@ public class StudentResource {
     private StudentService studentService;
     
     @GET 
-    @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Book.class)
+    @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Student.class)
     public List<Student> getStudents(@QueryParam("q") String query) {
         return studentService.findStudents(query);
     }
     
     @GET @Path("/{id}") 
-    @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Book.class)
+    @Produces(MediaType.APPLICATION_JSON) @JsonView(Views.Student.class)
     public Student getStudent(@PathParam("id") Long id) {
         Student student = studentService.getStudent(id);
         if (student != null) {

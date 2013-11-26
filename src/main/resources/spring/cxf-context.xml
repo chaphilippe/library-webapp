@@ -21,6 +21,7 @@
       <ref bean="loginResource" />
       <ref bean="artworkResource" />
       <ref bean="studentResource" />
+       <ref bean="teacherResource" />     
       <ref bean="userResource" />
 
     </jaxrs:serviceBeans>

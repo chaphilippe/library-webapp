@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
-  <changeSet id="1" author="nmo">
+  <changeSet id="1" author="selam">
     <createTable tableName="hibernate_sequences">
       <column name="sequence_name" type="varchar(255)">
         <constraints primaryKey="true" nullable="false" />
@@ -26,7 +26,43 @@
       <column name="age" type="varchar(500)">
         <constraints nullable="false" />
       </column>
-      <column name="sex" type="varchar(500)">
+      <column name="sex" type="varchar(1)">
+        <constraints nullable="true" />
+      </column>
+      <column name="origin" type="varchar(500)">
+        <constraints nullable="true" />
+      </column>
+      <column name="department" type="varchar(500)">
+        <constraints nullable="true" />
+      </column>
+      <column name="joined_date" type="datetime">
+        <constraints nullable="false" />
+      </column>
+      <column name="graduation_date" type="datetime">
+        <constraints nullable="true" />
+      </column>
+      <column name="is_competent" type="boolean" defaultValue="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="is_scholarship" type="boolean" defaultValue="false">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+
+    <createTable tableName="teacher">
+      <column name="teacher_id" type="bigint">
+        <constraints primaryKey="true" nullable="false" />
+      </column>
+      <column name="firstname" type="varchar(500)">
+        <constraints nullable="false" />
+      </column>
+      <column name="lastname" type="varchar(2000)">
+        <constraints nullable="true" />
+      </column>
+      <column name="age" type="varchar(500)">
+        <constraints nullable="false" />
+      </column>
+      <column name="sex" type="varchar(1)">
         <constraints nullable="true" />
       </column>
       <column name="origin" type="varchar(500)">
@@ -41,11 +77,8 @@
       <column name="is_competent" type="boolean" defaultValue="false">
         <constraints nullable="false" />
       </column>
-      <column name="is_scholarship" type="boolean" defaultValue="false">
-        <constraints nullable="false" />
-      </column>
     </createTable>
-
+    
     <createTable tableName="library_user">
       <column name="user_id" type="bigint">
         <constraints primaryKey="true" nullable="false" />

@@ -37,8 +37,8 @@ public class StudentService {
     }
     
     @Transactional
-    public void saveStudent(Student book) {
-    	studentRepository.save(book);
+    public void saveStudent(Student student) {
+    	studentRepository.save(student);
     }
     
     @Transactional

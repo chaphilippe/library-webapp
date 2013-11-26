@@ -15,14 +15,14 @@
 </div>
 
 <div class="row">
-  <div id="student-listing" class="col-12">
-    <div data-ng-repeat="student in students" class="student-item">
-      <div class="student-title-wrapper">
-        <h4 class="title">{{student.firstname}} {{student.lastname}}</h4>
-        <a data-ng-show="canEdit" href="#/students/{{student.id}}">
+  <div id="teacher-listing" class="col-12">
+    <div data-ng-repeat="teacher in teachers" class="teacher-item">
+      <div class="teacher-title-wrapper">
+        <h4 class="title">{{teacher.firstname}} {{teacher.lastname}}</h4>
+        <a data-ng-show="canEdit" href="#/teachers/{{teacher.id}}">
           <i class="glyphicon glyphicon-pencil"></i>
         </a>
-        <h5 class="author">{{student.department}}</h5>
+        <h5 class="author">{{teacher.department}}</h5>
       </div>
       <hr>
     </div>

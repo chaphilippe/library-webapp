@@ -26,7 +26,7 @@ public class StudentRepositoryTest {
     @Inject TransactionTemplate transactionTemplate;
     
     @Test
-    public void shouldBookFindById() throws Exception {
+    public void shouldStudentFindById() throws Exception {
         Student student = transactionTemplate.execute(new TransactionCallback<Student>() {
             @Override
             public Student doInTransaction(TransactionStatus status) {
@@ -41,7 +41,7 @@ public class StudentRepositoryTest {
     
     @Ignore
     @Test
-    public void shouldFindBookByName() throws Exception {
+    public void shouldFindStudentByName() throws Exception {
         List<Student> students = transactionTemplate.execute(new TransactionCallback<List<Student>>() {
             @Override
             public List<Student> doInTransaction(TransactionStatus status) {
@@ -55,7 +55,7 @@ public class StudentRepositoryTest {
     }
     
     @Ignore
-    public void shouldFindBookByAuthor() throws Exception {
+    public void shouldFindStudentByAuthor() throws Exception {
         List<Student> students = transactionTemplate.execute(new TransactionCallback<List<Student>>() {
             @Override
             public List<Student> doInTransaction(TransactionStatus status) {

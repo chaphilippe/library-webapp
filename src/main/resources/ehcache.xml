@@ -5,7 +5,7 @@
 
   <defaultCache eternal="false" timeToIdleSeconds="1200" timeToLiveSeconds="1200" />
   
-  <cache name="com.zuhlke.library.domain.Book" 
+  <cache name="com.zuhlke.library.domain.Student" 
     maxElementsInMemory="200" 
     eternal="false" 
     overflowToDisk="false" 

@@ -2,6 +2,7 @@ angular.module('library.controllers')
 
 .controller('studentListCtrl', function($scope, studentService, authService) {
   $scope.students = studentService.query();
+  $scope.title = 'Students';
   $scope.query = '';
 
   $scope.search = function(query) {

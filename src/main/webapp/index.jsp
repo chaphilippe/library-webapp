@@ -14,7 +14,7 @@
     [data-ng-cloak] { display: none !important; }
   </style>
   
-  <title>Library</title>
+  <title>Selam Vocational Center</title>
 
 </head>
 

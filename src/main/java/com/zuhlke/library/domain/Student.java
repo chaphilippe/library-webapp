@@ -43,8 +43,7 @@ public class Student implements Serializable {
     @Length(max = 255) @NotNull @NotEmpty
     private String age;
     
-    @Column(name = "sex")
-    @Length(max = 1)
+    @Column(name = "gender")
     private String sex;
     
     @Column(name = "origin")
@@ -64,10 +63,10 @@ public class Student implements Serializable {
     private Date graduationDate;
     
     @Column(name = "is_competent", columnDefinition = "BIT")
-    private Boolean isCompetent;
+    private Boolean isCompetent = false;
     
     @Column(name = "is_scholarship", columnDefinition = "BIT")
-    private Boolean isScholarship;
+    private Boolean isScholarship  = false;
     
     public Student() { }
 

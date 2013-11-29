@@ -18,7 +18,11 @@
     <div class="form-group">
       <label class="col-2 control-label" for="input-description">Sex</label>
       <div class="col-8 controls">
-        <textarea rows="10" id="input-description" class="form-control" data-ng-model="teacher.sex" maxlength="1"></textarea>
+      	    <select class="form-control" data-ng-model="teacher.sex" required>
+              <option value="" selected="selected" disabled>Please select gender</option>
+              <option value="FEMALE">Female</option>
+              <option value="MALE">Male</option>
+            </select>
       </div>
     </div>
     <div class="form-group">
@@ -42,7 +46,7 @@
     <div class="form-group">
       <label class="col-2 control-label" for="input-artwork">Joined Date</label>
       <div class="col-8 controls">
-        <input type="text" data-datepicker data-ng-model="teacher.joinedDate" required><i class="info icon-calendar"></i>
+        <input type="text" data-datepicker="true" data-ng-model="teacher.joinedDate" required><i class="info icon-calendar"></i>
       </div>
     </div>
     <div class="form-group">

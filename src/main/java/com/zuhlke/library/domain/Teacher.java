@@ -41,8 +41,7 @@ public class Teacher implements Serializable {
     @Length(max = 255) @NotNull @NotEmpty
     private String age;
     
-    @Column(name = "sex")
-    @Length(max = 1)
+    @Column(name = "gender")
     private String sex;
     
     @Column(name = "origin")
@@ -58,7 +57,7 @@ public class Teacher implements Serializable {
     private Date joinedDate;
 
     @Column(name = "is_competent", columnDefinition = "BIT")
-    private Boolean isCompetent;
+    private Boolean isCompetent  = false;
   
     public Teacher() { }
 

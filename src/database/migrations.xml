@@ -114,5 +114,11 @@
     </insert>  
     
   </changeSet>
+  
+  <changeSet id="genderRename" author="iky">
+    <renameColumn tableName="student" oldColumnName="sex" newColumnName="gender" columnDataType="varchar(500)" />
+    <renameColumn tableName="teacher" oldColumnName="sex" newColumnName="gender" columnDataType="varchar(500)" />
+  </changeSet>
+  
 </databaseChangeLog>
 

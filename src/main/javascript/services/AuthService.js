@@ -12,6 +12,8 @@ angular.module('library.services')
       $http.get('api/checklogin').success(function(user) {
         currentUser = user;
         deferred.resolve(currentUser);
+      }).error(function() {
+        window.location.href = '.';
       });
       return deferred.promise;
     },

@@ -28,6 +28,7 @@
       <intercept-url pattern="/api/artwork/upload" access="hasRole('ROLE_ADMIN')" /> 
       <intercept-url pattern="/api/logout" access="permitAll" /> 
       <intercept-url pattern="/api/authenticate" access="permitAll" /> 
+      <intercept-url pattern="/api/checkLogin" access="hasRole('ROLE_USER')" method="GET"/> 
       <intercept-url pattern="/partials/**" access="permitAll" /> 
     </http>
     

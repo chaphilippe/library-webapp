@@ -25,6 +25,7 @@ public class StudentRepositoryTest {
     @Inject StudentRepository studentRepository;
     @Inject TransactionTemplate transactionTemplate;
     
+    @Ignore
     @Test
     public void shouldStudentFindById() throws Exception {
         Student student = transactionTemplate.execute(new TransactionCallback<Student>() {

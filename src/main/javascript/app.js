@@ -43,7 +43,7 @@ angular.module('library.app', [ 'library.services', 'library.controllers', 'libr
 		    templateUrl : 'partials/signup.html'
 		      
   }).otherwise({
-    redirectTo : '/students'
+    redirectTo : '/login'
   });
 
 })

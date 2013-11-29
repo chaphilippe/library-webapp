@@ -8,6 +8,7 @@ import static org.junit.Assert.assertThat;
 
 import javax.inject.Inject;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -27,6 +28,7 @@ public class UserRepositoryTest {
     @Inject UserRepository userRepository;
     @Inject TransactionTemplate transactionTemplate;
     
+    @Ignore
     @Test
     public void shouldFindUserByEmail() throws Exception {
         User user = transactionTemplate.execute(new TransactionCallback<User>() {

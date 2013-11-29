@@ -102,8 +102,8 @@
 
     <insert tableName="library_user">
       <column name="user_id" value="1" />
-      <column name="email" value="admin@zuhlke.com" />
-      <column name="password" value="7Le61jX4m+a+1TNd/ltaD7ee+jyqsgYV0Mfd0EYS18RqxBX+9YfVbkXZRd9/VdZAJ7l/SDcQn03NicBe5vnj8A==" />
+      <column name="email" value="admin" />
+      <column name="password" value="TmE4d/EGKVXWyTWjUcCw9qoUr2bXprAzNafsV5iLHjdoPk39EAQYVxTMoacu50NlCXx70AJXsHkdN0y3mG8Ycg==" />
       <column name="role" value="ADMINISTRATOR" />
       <column name="fullname" value="Administrator" />
     </insert>  
